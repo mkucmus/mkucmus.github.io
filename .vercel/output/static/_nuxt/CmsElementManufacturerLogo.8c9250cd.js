@@ -1,0 +1,1 @@
+import{_ as t}from"./CmsElementImage.vue.70cc70b2.js";import{a as e,o,c}from"./entry.4f4ac261.js";const _=e({__name:"CmsElementManufacturerLogo",props:{content:null},setup(n){return(a,r)=>(o(),c(t,{content:n.content},null,8,["content"]))}});export{_ as default};

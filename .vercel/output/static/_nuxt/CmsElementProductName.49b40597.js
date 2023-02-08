@@ -1,0 +1,1 @@
+import e from"./CmsElementText.4b95771f.js";import{a as n,o,c}from"./entry.4f4ac261.js";import"./_plugin-vue_export-helper.c27b6911.js";const p=n({__name:"CmsElementProductName",props:{content:null},setup(t){return(m,r)=>(o(),c(e,{content:t.content},null,8,["content"]))}});export{p as default};

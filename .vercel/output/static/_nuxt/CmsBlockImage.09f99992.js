@@ -1,0 +1,1 @@
+import{_ as s}from"./CmsGenericElement.vue.2a5d23f2.js";import{a,aM as m,o as r,j as l,x as p,u as _}from"./entry.4f4ac261.js";const d=a({__name:"CmsBlockImage",props:{content:null},setup(e){const n=e,{getSlotContent:t}=m(n.content),o=t("image");return(u,i)=>{const c=s;return r(),l("div",null,[p(c,{content:_(o)},null,8,["content"])])}}});export{d as default};

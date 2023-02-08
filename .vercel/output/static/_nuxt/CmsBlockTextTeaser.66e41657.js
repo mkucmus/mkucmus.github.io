@@ -1,0 +1,1 @@
+import{_ as r}from"./CmsGenericElement.vue.2a5d23f2.js";import{a as s,o as e,j as t,F as a,z as l,c as m}from"./entry.4f4ac261.js";const f=s({__name:"CmsBlockTextTeaser",props:{content:null},setup(o){return(_,u)=>{const c=r;return e(),t("div",null,[(e(!0),t(a,null,l(o.content.slots,n=>(e(),m(c,{key:n.id,content:n},null,8,["content"]))),128))])}}});export{f as default};

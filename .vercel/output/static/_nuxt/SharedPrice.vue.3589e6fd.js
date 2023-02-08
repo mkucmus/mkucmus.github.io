@@ -1,0 +1,1 @@
+import{a as n,t as c,o as l,j as p,X as s,v as i,y as u,u as m,N as d}from"./entry.4f4ac261.js";const f={class:"flex gap-1"},g=n({__name:"SharedPrice",props:{value:null},setup(a){const t=a,{getFormattedPrice:o}=d(),r=c(()=>o(t.value));return(e,_)=>(l(),p("p",f,[s(e.$slots,"beforePrice"),i("span",null,u(m(r)),1),s(e.$slots,"afterPrice")]))}});export{g as _};

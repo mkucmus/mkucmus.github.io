@@ -1,0 +1,1 @@
+import{_ as s}from"./CmsGenericElement.vue.2a5d23f2.js";import{a,aM as r,o as m,c as l,u as p}from"./entry.4f4ac261.js";const C=a({__name:"CmsBlockTextHero",props:{content:null},setup(n){const t=n,{getSlotContent:o}=r(t.content),e=o("content");return(_,u)=>{const c=s;return m(),l(c,{content:p(e)},null,8,["content"])}}});export{C as default};
