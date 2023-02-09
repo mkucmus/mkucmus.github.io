@@ -12,7 +12,6 @@ import Cookies from "js-cookie";
 const ShopwarePlugin = {
   install(app, options) {
     const contextToken = Cookies.get("sw-context-token");
-    const languageId = Cookies.get("sw-language-id");
 
     const instance = createInstance({
       endpoint: "<%= options.shopwareEndpoint %>",
@@ -25,7 +24,6 @@ const ShopwarePlugin = {
           "<%=  options.shopwareApiClient.auth ? options.shopwareApiClient.auth.password : undefined %>",
       },
       contextToken,
-      languageId,
     });
     /**
      * Save current contextToken when its change
@@ -33,10 +31,6 @@ const ShopwarePlugin = {
     instance.onConfigChange(({ config }) => {
       try {
         Cookies.set("sw-context-token", config.contextToken, {
-          expires: 1,
-          path: "/",
-        });
-        Cookies.set("sw-language-id", config.languageId, {
           expires: 1,
           path: "/",
         });
