@@ -33,7 +33,7 @@ export default defineNuxtModule<ShopwareNuxtOptions>({
       filename: "runtime/shopware.plugin.mjs",
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      src: resolve(__dirname, "../plugin.ts"),
+      src: resolve(__dirname, "./plugin.ts"),
       options: {
         shopwareEndpoint:
           moduleConfig.shopwareEndpoint ??
