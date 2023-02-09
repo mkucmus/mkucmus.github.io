@@ -1,4 +1,5 @@
 import transformerDirective from "@unocss/transformer-directives";
+import module from "./module";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -18,12 +19,7 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: true,
   },
-  modules: [
-    "@vueuse/nuxt",
-    "@unocss/nuxt",
-    "@shopware-pwa/nuxt3-module",
-    "@shopware-pwa/cms-base",
-  ],
+  modules: ["@vueuse/nuxt", "@unocss/nuxt", module, "@shopware-pwa/cms-base"],
   // components: true,
   components: {
     dirs: ["~/components"],
