@@ -7,19 +7,12 @@ import {
 } from "@shopware-pwa/composables-next";
 import { createInstance } from "@shopware-pwa/api-client";
 import { ref } from "vue";
+import Cookies from "js-cookie";
 
 const ShopwarePlugin = {
   install(app, options) {
-    const contextToken = useCookie("sw-context-token", {
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: "Lax",
-      path: "/",
-    });
-    const languageId = useCookie("sw-language-id", {
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: "Lax",
-      path: "/",
-    });
+    const contextToken = Cookies.get("sw-context-token");
+    const languageId = Cookies.get("sw-language-id");
 
     const instance = createInstance({
       endpoint: "<%= options.shopwareEndpoint %>",
@@ -31,16 +24,22 @@ const ShopwarePlugin = {
         password:
           "<%=  options.shopwareApiClient.auth ? options.shopwareApiClient.auth.password : undefined %>",
       },
-      contextToken: contextToken.value,
-      languageId: languageId.value,
+      contextToken,
+      languageId,
     });
     /**
      * Save current contextToken when its change
      */
     instance.onConfigChange(({ config }) => {
       try {
-        contextToken.value = config.contextToken;
-        languageId.value = config.languageId;
+        Cookies.set("sw-context-token", config.contextToken, {
+          expires: 1,
+          path: "/",
+        });
+        Cookies.set("sw-language-id", config.languageId, {
+          expires: 1,
+          path: "/",
+        });
       } catch (e) {
         // Sometimes cookie is set on server after request is send, it can fail silently
       }
