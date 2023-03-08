@@ -14,6 +14,8 @@ export default defineNuxtConfig({
      */
     useMeta: "~/composables/useMeta",
   },
+  ssr: false,
+  target: "static",
   typescript: {
     typeCheck: true,
     strict: true,
